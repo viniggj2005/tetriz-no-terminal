@@ -62,7 +62,7 @@ def is_valid_position(board, piece, offset):
     return True
 
 def place_piece(board, piece, offset):
-    #"Trava" a peça no tabuleiro –coloca seus blocos ao grid.
+    #"Trava" a peça no tabuleiro – coloca seus blocos no grid.
     off_x, off_y = offset
     for y, row in enumerate(piece):
         for x, cell in enumerate(row):
