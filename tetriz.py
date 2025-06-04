@@ -169,7 +169,7 @@ def tetris(stdscr):
                 board, removed = remove_complete_lines(board)
                 score += removed * 100
                 # Seleciona uma nova peça aleatória.
-                current_piece = random.choice(list(TETROMINOS.values()))
+                current_piece = [row[:] for row in random.choice(list(TETROMINOS.values()))]
                 piece_x = BOARD_WIDTH // 2 - len(current_piece[0]) // 2
                 piece_y = 0
                 if not is_valid_position(board, current_piece, (piece_x, piece_y)):
